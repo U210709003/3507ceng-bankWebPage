@@ -1,0 +1,246 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+/* header styling*/
+.header {
+    /*background-color:rgb(0, 47, 0);*/
+    background-image: url("images/fforest.png");
+    background-size: cover;
+    background-position: center;
+    color:white;
+    padding: 200px;
+    text-align: center;
+    position: relative;
+}
+
+.header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    margin: 0;
+    font-size: 3em; 
+    color: rgba(0, 47, 0);
+    
+    padding: 10px 20px;
+    border-radius: 5px; 
+}
+
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* navbar menu links */
+.navbar ul {
+    display: none; 
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgb(0, 47, 0);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.navbar li a {
+    color:white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.navbar li a:hover {
+    background-color:rgb(106, 150, 106);;
+}
+
+/* hamburber menu styling */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 999;
+}
+
+.hamburger span {
+    height: 3px;
+    background-color:white;
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+/* show menu when checkbar is clicked */
+#menu-toggle:checked + .hamburger + .navbar ul {
+    display: block;
+}
+
+/* left and right sidebars */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+    
+}
+
+.block {
+    background-color:rgb(106, 150, 106);
+    top: 115px;
+    width: 180px;
+    position: fixed; 
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+.left-block {
+    left: 15px;
+
+}
+
+.right-block {
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap:10px   
+}
+
+.inner-block {
+    padding:10px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+div img{
+    display: block;
+    width: 50px;
+    border: 1px solid black;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.5);
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 7px;
+}
+
+
+
+side p{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+
+}
+
+
+
+/* main block */
+.main-content {
+    flex: 1;
+    background-color:rgb(106, 150, 106);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px 200px 20px 200px;
+    text-align: center;
+}
+
+.hero {
+    background-color: rgb(0, 47, 0);
+    padding: 20px;
+    color:white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* footer styling */
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-block h3{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-block ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-block li {
+    margin: 5px 0;
+
+}
+
+
+.footer-block a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-block a:hover {
+    color: rgb(106, 150, 106); 
+}
+
+
+
+/* responsive */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    /* Adjust Navbar to Full Width on Mobile */
+    .navbar ul {
+        position: static;
+        width: 100%;
+
+    }
+
+    .block {
+        margin-top: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-block {
+        margin-bottom: 20px;
+    }
+}
